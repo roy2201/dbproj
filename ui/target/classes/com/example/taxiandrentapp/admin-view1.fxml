@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="948.0" style="-fx-background-color: feffef;" stylesheets="@mystyle.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taxiandrentapp.AdminController">
+   <children>
+      <TableView fx:id="tableAdmin1" layoutX="382.0" layoutY="331.0" prefHeight="343.0" prefWidth="554.0" style="-fx-border-color: gray; -fx-background-color: lightgray;" />
+      <Label fx:id="labelINfo" layoutX="34.0" layoutY="427.0" prefHeight="25.0" prefWidth="229.0" />
+      <Button layoutX="22.0" layoutY="606.0" mnemonicParsing="false" onAction="#nextPage" stylesheets="@mystyle.css" text="next page">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font></Button>
+      <Button id="logout" layoutX="22.0" layoutY="640.0" mnemonicParsing="false" onAction="#logOutPage" prefHeight="29.0" prefWidth="78.0" stylesheets="@mystyle.css" text="logout" textAlignment="CENTER">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font></Button>
+      <Label fx:id="labelInfo" layoutX="646.0" layoutY="239.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label fx:id="labelInfoRemove" alignment="CENTER" layoutX="71.0" layoutY="160.0" prefHeight="25.0" prefWidth="239.0" text="test" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>
+      <VBox alignment="CENTER" layoutX="22.0" layoutY="12.0" prefHeight="148.0" prefWidth="349.0" spacing="6.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="37.0" prefWidth="336.0" spacing="5.0">
+               <children>
+                  <TextField fx:id="txtDate1" promptText="Date1" stylesheets="@mystyle.css" />
+                  <TextField fx:id="txtDate2" promptText="Date2" stylesheets="@mystyle.css" />
+                  <Button mnemonicParsing="false" onAction="#ViewBetweenTwoDates" stylesheets="@mystyle.css" text="GO">
+                     <font>
+                        <Font name="Cambria" size="13.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="338.0" spacing="5.0">
+               <children>
+                  <TextField fx:id="txtGreaterThan" promptText="Graeter than" stylesheets="@mystyle.css" />
+                  <TextField fx:id="txtLessThan" promptText="Less Than" stylesheets="@mystyle.css" />
+                  <Button mnemonicParsing="false" onAction="#ViewGreaterThanORLessThan" stylesheets="@mystyle.css" text="GO">
+                     <font>
+                        <Font name="Cambria" size="13.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="406.0" spacing="5.0">
+               <children>
+                  <TextField fx:id="txtArrivalDate" promptText="Arrival Date" stylesheets="@mystyle.css" />
+                  <TextField fx:id="txtCarId1" promptText="Car ID" stylesheets="@mystyle.css" />
+                  <Button mnemonicParsing="false" onAction="#ArrivalDate" stylesheets="@mystyle.css" text="GO">
+                     <font>
+                        <Font name="Cambria" size="13.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#ViewCarById" prefHeight="26.0" prefWidth="120.0" stylesheets="@mystyle.css" text="View">
+                     <font>
+                        <Font name="Cambria" size="13.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#RemoveCarById" prefHeight="26.0" prefWidth="122.0" stylesheets="@mystyle.css" text="Remove Car">
+                     <font>
+                        <Font name="Cambria" size="12.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="375.0" layoutY="50.0" prefHeight="25.0" prefWidth="166.0" />
+      <Label layoutX="375.0" layoutY="14.0" prefHeight="25.0" prefWidth="166.0" />
+      <VBox alignment="CENTER" layoutX="22.0" layoutY="232.0" prefHeight="114.0" prefWidth="269.0" spacing="10.0">
+         <children>
+            <TextField fx:id="txtCarId2" prefHeight="27.0" prefWidth="182.0" promptText="Car ID" stylesheets="@mystyle.css" />
+            <HBox alignment="CENTER" prefHeight="42.0" prefWidth="249.0" spacing="5.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#UpdateInsurance" prefHeight="26.0" prefWidth="126.0" stylesheets="@mystyle.css" text="Update Insurance">
+                     <font>
+                        <Font name="Cambria" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#ViewInsurance" stylesheets="@mystyle.css" text="Insurance History">
+                     <font>
+                        <Font name="Cambria" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="229.0" layoutY="503.0" prefHeight="167.0" prefWidth="141.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#ViewRented" prefHeight="26.0" prefWidth="122.0" stylesheets="@mystyle.css" text="View Rented">
+               <font>
+                  <Font name="Cambria" size="13.0" />
+               </font></Button>
+            <Button fx:id="btnViewAllCars" mnemonicParsing="false" onAction="#ViewAllCars" prefHeight="26.0" prefWidth="123.0" stylesheets="@mystyle.css" text="View All Cars">
+               <font>
+                  <Font name="Cambria" size="13.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#ViewExpired" prefHeight="26.0" prefWidth="123.0" stylesheets="@mystyle.css" text="View Expired">
+               <font>
+                  <Font name="Cambria" size="13.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#ViewAllCustomers" stylesheets="@mystyle.css" text="View All Customers">
+               <font>
+                  <Font name="Cambria" size="13.0" />
+               </font></Button>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="14.0" layoutY="390.0" prefHeight="37.0" prefWidth="269.0" spacing="5.0">
+         <children>
+            <TextField fx:id="txtRentId" promptText="Rent ID" stylesheets="@mystyle.css" />
+            <Button mnemonicParsing="false" onAction="#ConfirmArrival" stylesheets="@mystyle.css" text="Confirm Arrival">
+               <font>
+                  <Font name="Cambria" size="13.0" />
+               </font></Button>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" layoutX="579.0" layoutY="63.0" prefHeight="161.0" prefWidth="284.0" spacing="5.0">
+         <children>
+            <HBox prefHeight="24.0" prefWidth="198.0">
+               <children>
+                  <TextField fx:id="txtColor" promptText="Color" styleClass="text-field" stylesheets="@mystyle.css" />
+                  <TextField fx:id="txtYear" promptText="Year" styleClass="text-field" stylesheets="@mystyle.css" />
+               </children>
+            </HBox>
+            <HBox prefHeight="24.0" prefWidth="198.0">
+               <children>
+                  <TextField fx:id="txtModel" promptText="Model" styleClass="text-field" stylesheets="@mystyle.css" />
+                  <TextField fx:id="txtType" promptText="Type" styleClass="text-field" stylesheets="@mystyle.css" />
+               </children>
+            </HBox>
+            <HBox prefHeight="26.0" prefWidth="198.0">
+               <children>
+                  <TextField fx:id="txtLocationId" promptText="Location ID" styleClass="text-field" stylesheets="@mystyle.css" />
+                  <TextField fx:id="txtInsuranceCost" promptText="Insurance Cost" styleClass="text-field" stylesheets="@mystyle.css" />
+               </children>
+            </HBox>
+            <HBox prefHeight="37.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="txtPricePerDay" promptText="Price per Day" styleClass="text-field" stylesheets="@mystyle.css" />
+                  <TextField fx:id="txtPenaltyPerDay" promptText="Penalty per Day" styleClass="text-field" stylesheets="@mystyle.css" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="31.0" prefWidth="222.0">
+               <children>
+                  <Button fx:id="btnaddcar" mnemonicParsing="false" onAction="#AddCarBtn" prefHeight="21.0" prefWidth="151.0" stylesheets="@mystyle.css" text="Add Car">
+                     <font>
+                        <Font name="Cambria" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label fx:id="labelUpdateInsurance" layoutX="29.0" layoutY="337.0" prefHeight="25.0" prefWidth="260.0">
+         <font>
+            <Font name="Cambria" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="670.0" layoutY="32.0" text="Adding New Car" />
+      <Label layoutX="278.0" layoutY="485.0" text="Viewer" />
+      <Separator layoutX="570.0" layoutY="37.0" prefHeight="5.0" prefWidth="90.0" style="-fx-background-color: gray;" />
+      <Separator layoutX="782.0" layoutY="37.0" prefHeight="5.0" prefWidth="90.0" style="-fx-background-color: gray;" />
+      <Separator layoutX="326.0" layoutY="493.0" prefHeight="5.0" prefWidth="43.0" style="-fx-background-color: gray;" />
+      <Separator layoutX="229.0" layoutY="493.0" prefHeight="5.0" prefWidth="43.0" style="-fx-background-color: gray;" />
+      <Label layoutX="123.0" layoutY="216.0" prefHeight="16.0" prefWidth="72.0" text="Insurance" />
+      <Separator layoutX="207.0" layoutY="222.0" prefHeight="5.0" prefWidth="78.0" style="-fx-background-color: gray;" />
+      <Separator layoutX="32.0" layoutY="222.0" prefHeight="5.0" prefWidth="78.0" style="-fx-background-color: gray;" />
+   </children>
+</Pane>

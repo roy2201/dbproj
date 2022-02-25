@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane fx:id="btnPendingRequest" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="313.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taxiandrentapp.AdminController2">
+   <children>
+      <TableView fx:id="tableInfo" layoutX="330.0" layoutY="7.0" prefHeight="299.0" prefWidth="385.0" stylesheets="@mystyle.css" />
+      <Button layoutX="25.0" layoutY="230.0" mnemonicParsing="false" onAction="#securityPage" prefHeight="25.0" prefWidth="81.0" stylesheets="@mystyle.css" text="security" />
+      <Button layoutX="25.0" layoutY="268.0" mnemonicParsing="false" onAction="#firstAdminPage" prefHeight="25.0" prefWidth="81.0" stylesheets="@mystyle.css" text="back" />
+      <Label fx:id="labelInfo" layoutX="33.0" layoutY="117.0" prefHeight="39.0" prefWidth="240.0" />
+      <VBox alignment="CENTER" layoutX="36.0" layoutY="14.0" prefHeight="122.0" prefWidth="240.0" spacing="5.0">
+         <children>
+            <TextField fx:id="txtRentInfoId" promptText="Request ID" stylesheets="@mystyle.css" />
+            <TextField fx:id="txtPercentage" promptText="Refund Percentage" stylesheets="@mystyle.css" />
+            <HBox prefHeight="39.0" prefWidth="218.0" spacing="5.0">
+               <children>
+                  <Button fx:id="btnRefund" mnemonicParsing="false" onAction="#RefundClicked" prefHeight="26.0" prefWidth="110.0" stylesheets="@mystyle.css" text="Refund" />
+                  <Button fx:id="btnPending" lineSpacing="5.0" mnemonicParsing="false" onAction="#ViewPendingRequest" stylesheets="@mystyle.css" text="Pending Requests" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="36.0" layoutY="166.0" prefHeight="39.0" prefWidth="248.0" spacing="5.0">
+         <children>
+            <TextField fx:id="txtCardNumber" promptText="card number" stylesheets="@mystyle.css" />
+            <Button fx:id="btnViewAccount" mnemonicParsing="false" onAction="#ViewAccountClicked" stylesheets="@mystyle.css" text="View Account" />
+         </children>
+      </HBox>
+   </children>
+</Pane>
