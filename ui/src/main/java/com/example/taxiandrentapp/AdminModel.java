@@ -19,19 +19,21 @@ public class AdminModel {
      }
     }
 
-    public void addCar(String color, String year, String model, String type, String price, String penalty, String location, String cost) throws Exception {
-        PreparedStatement ps;
-        String query = "exec spAddCar ?,?,?,?,?,?,?,?";
-        ps = con.prepareStatement(query);
-        ps.setString(1,color);
-        ps.setString(2,year);
-        ps.setString(3,model);
-        ps.setString(4,type);
-        ps.setString(5,price);
-        ps.setString(6,penalty);
-        ps.setString(7,location);
-        ps.setString(8,cost);
-        if(ps.execute()) throw new Exception();
+    public int addCar(String color, String year, String model, String type, String price, String penalty, String location, String cost) throws Exception {
+        CallableStatement cst;
+        String query = "exec spAddCar ?,?,?,?,?,?,?,?,?";
+        cst = con.prepareCall(query);
+        cst.setString(1,color);
+        cst.setString(2,year);
+        cst.setString(3,model);
+        cst.setString(4,type);
+        cst.setString(5,price);
+        cst.setString(6,penalty);
+        cst.setString(7,location);
+        cst.setString(8,cost);
+        cst.registerOutParameter(9,Types.INTEGER);
+        if(cst.execute()) throw new Exception();
+        return cst.getInt(9);
     }
 
 }

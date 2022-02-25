@@ -129,9 +129,15 @@ public class AdminController {
             resetTextFields(txtColor, txtYear, txtModel, txtType, txtPricePerDay, txtPenaltyPerDay, txtLocationId, txtInsuranceCost);
         } else {
             try {
-                adminModel.addCar(txtColor.getText(), txtYear.getText(), txtModel.getText(), txtType.getText(), txtPricePerDay.getText(), txtPenaltyPerDay.getText(), txtLocationId.getText(), txtInsuranceCost.getText());
-                labelInfo.setText("The car was added successfully!");
+                int errorCode = adminModel.addCar(txtColor.getText(), txtYear.getText(), txtModel.getText(), txtType.getText(), txtPricePerDay.getText(), txtPenaltyPerDay.getText(), txtLocationId.getText(), txtInsuranceCost.getText());
                 resetTextFields(txtColor, txtYear, txtModel, txtType, txtPricePerDay, txtPenaltyPerDay, txtLocationId, txtInsuranceCost);
+                if(errorCode == 1) {
+                    labelInfo.setText("The car was added successfully!");
+                    labelInfo.setTextFill(Color.BLUE);
+                } else if (errorCode == -1) {
+                    labelInfo.setTextFill(Color.RED);
+                    labelInfo.setText("Invalid Branch");
+                }
             } catch (Exception ex) {
                 ex.printStackTrace();
             }

@@ -40,7 +40,7 @@
 }
 
 .label {
-    -fx-background-color: yellow;
+    -fx-background-color: lightorange;
     -fx-alignment: center;
     -fx-text-fill: blue;
     -fx-font-weight: 500;

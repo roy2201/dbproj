@@ -23,7 +23,7 @@
             <Font name="Cambria Bold" size="14.0" />
          </font></Button>
       <Label fx:id="labelInfo" layoutX="646.0" layoutY="239.0" prefHeight="26.0" prefWidth="150.0" />
-      <Label fx:id="labelInfoRemove" alignment="CENTER" layoutX="71.0" layoutY="160.0" prefHeight="25.0" prefWidth="239.0" text="test" textAlignment="CENTER">
+      <Label fx:id="labelInfoRemove" alignment="CENTER" layoutX="77.0" layoutY="160.0" prefHeight="25.0" prefWidth="239.0" textAlignment="CENTER">
          <font>
             <Font name="Arial" size="12.0" />
          </font></Label>
@@ -73,8 +73,6 @@
             </HBox>
          </children>
       </VBox>
-      <Label layoutX="375.0" layoutY="50.0" prefHeight="25.0" prefWidth="166.0" />
-      <Label layoutX="375.0" layoutY="14.0" prefHeight="25.0" prefWidth="166.0" />
       <VBox alignment="CENTER" layoutX="22.0" layoutY="232.0" prefHeight="114.0" prefWidth="269.0" spacing="10.0">
          <children>
             <TextField fx:id="txtCarId2" prefHeight="27.0" prefWidth="182.0" promptText="Car ID" stylesheets="@mystyle.css" />
