@@ -61,12 +61,6 @@ public class CustomerController implements javafx.fxml.Initializable {
     private Label rentIdErrorLabel;
     @FXML
     private Label cardNumberErrorLabel;
-    @FXML
-    private RadioButton increasingRadioButton;
-    @FXML
-    private RadioButton decreasingRadioButton;
-    @FXML
-    private ToggleGroup orderGroup;
 
     private ObservableList<ObservableList> data;
     private Connection con;
@@ -400,11 +394,6 @@ public class CustomerController implements javafx.fxml.Initializable {
     @FXML
     public void loadAllCars() {
         String query = "select * from vwCarsAndBranch";
-        if(increasingRadioButton.isSelected()) {
-            query += " order by " + COL_PRICE + " asc";
-        } else if (decreasingRadioButton.isSelected()) {
-            query += " order by " + COL_PRICE + " desc";
-        }
         try {
             PreparedStatement ps = con.prepareStatement(query);
             ResultSet rs = ps.executeQuery();

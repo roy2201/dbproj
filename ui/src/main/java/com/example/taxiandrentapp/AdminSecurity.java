@@ -44,7 +44,7 @@ public class AdminSecurity implements Initializable {
     }
 
     public void loadDatabases() {
-        String query = "exec spLoadDbNames";
+        String query = "exec spLoadDBNames";
         ArrayList<String> databases = new ArrayList<>();
         try {
             PreparedStatement ps = con.prepareStatement(query);

@@ -4,10 +4,8 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -30,11 +28,11 @@
          </font></TextField>
       <Button layoutX="14.0" layoutY="353.0" mnemonicParsing="false" onAction="#viewReceiptAction" prefHeight="30.0" prefWidth="151.0" stylesheets="@mystyle.css" text="View Reciept">
          <font>
-            <Font name="Cambria" size="13.0" />
+            <Font size="13.0" />
          </font></Button>
       <Button layoutX="14.0" layoutY="448.0" mnemonicParsing="false" onAction="#payAction" prefHeight="27.0" prefWidth="151.0" stylesheets="@mystyle.css" text="Pay Reciept">
          <font>
-            <Font name="Cambria" size="13.0" />
+            <Font size="13.0" />
          </font></Button>
       <ListView fx:id="receiptList" layoutX="198.0" layoutY="284.0" prefHeight="96.0" prefWidth="176.0" stylesheets="@mystyle.css" />
       <Label fx:id="statusLabel" layoutX="176.0" layoutY="453.0" prefHeight="19.0" prefWidth="168.0" stylesheets="@mystyle.css" textFill="RED">
@@ -58,9 +56,9 @@
                <font>
                   <Font name="Cambria" size="13.0" />
                </font></TextField>
-            <Button mnemonicParsing="false" onAction="#checkDaysLeftAction" stylesheets="@mystyle.css" text="check days left">
+            <Button mnemonicParsing="false" onAction="#checkDaysLeftAction" stylesheets="@mystyle.css" text="check days left" textAlignment="CENTER">
                <font>
-                  <Font name="Cambria" size="13.0" />
+                  <Font size="13.0" />
                </font></Button>
          </children>
       </HBox>
@@ -73,23 +71,23 @@
             </Button>
             <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" stylesheets="@mystyle.css" text="Statistics">
                <font>
-                  <Font name="Cambria" size="13.0" />
+                  <Font size="13.0" />
                </font></Button>
             <Button mnemonicParsing="false" onAction="#viewRequests" prefHeight="27.0" prefWidth="95.0" stylesheets="@mystyle.css" text="My Requests">
                <font>
-                  <Font name="Cambria" size="13.0" />
+                  <Font size="13.0" />
                </font></Button>
             <Button mnemonicParsing="false" onAction="#viewRentsAction" prefHeight="25.0" prefWidth="84.0" stylesheets="@mystyle.css" text="My Rents">
                <font>
-                  <Font name="Cambria" size="13.0" />
+                  <Font size="13.0" />
                </font></Button>
             <Button mnemonicParsing="false" onAction="#viewCardsAction" prefHeight="25.0" prefWidth="84.0" stylesheets="@mystyle.css" text="My Cards">
                <font>
-                  <Font name="Cambria" size="13.0" />
+                  <Font size="13.0" />
                </font></Button>
          </children>
       </HBox>
-      <VBox layoutX="13.0" layoutY="487.0" prefHeight="158.0" prefWidth="151.0" spacing="5.0">
+      <VBox layoutX="13.0" layoutY="496.0" prefHeight="158.0" prefWidth="151.0" spacing="5.0">
          <children>
             <TextField fx:id="emailTextField" prefHeight="30.0" prefWidth="154.0" promptText="Email" stylesheets="@mystyle.css">
                <font>
@@ -105,7 +103,7 @@
                </font></TextField>
             <Button mnemonicParsing="false" onAction="#initRequest" prefHeight="30.0" prefWidth="187.0" stylesheets="@mystyle.css" text="Request Refund">
                <font>
-                  <Font name="Cambria" size="13.0" />
+                  <Font size="13.0" />
                </font></Button>
          </children>
       </VBox>
@@ -113,16 +111,16 @@
          <font>
             <Font name="Cambria Bold" size="12.0" />
          </font></Label>
-      <Label fx:id="cardNumberErrorLabel" layoutX="176.0" layoutY="566.0" prefHeight="17.0" prefWidth="168.0" stylesheets="@mystyle.css">
+      <Label fx:id="cardNumberErrorLabel" layoutX="176.0" layoutY="575.0" prefHeight="17.0" prefWidth="168.0" stylesheets="@mystyle.css">
          <font>
             <Font name="Cambria Bold" size="12.0" />
          </font></Label>
-      <Label fx:id="emailErrorLabel" layoutX="176.0" layoutY="492.0" prefHeight="17.0" prefWidth="168.0" stylesheets="@mystyle.css">
+      <Label fx:id="emailErrorLabel" layoutX="176.0" layoutY="502.0" prefHeight="17.0" prefWidth="168.0" stylesheets="@mystyle.css">
          <font>
             <Font name="Cambria Bold" size="13.0" />
          </font>
       </Label>
-      <HBox alignment="CENTER_LEFT" layoutX="18.0" layoutY="24.0" prefHeight="41.0" prefWidth="200.0" spacing="5.0">
+      <HBox layoutX="18.0" layoutY="24.0" prefHeight="41.0" prefWidth="200.0" spacing="5.0">
          <children>
             <ComboBox fx:id="locationComboBox" prefHeight="25.0" prefWidth="114.0" promptText="Location" stylesheets="@mystyle.css" />
             <ComboBox fx:id="modelComboBox" prefHeight="25.0" prefWidth="114.0" promptText="Model" stylesheets="@mystyle.css" />
@@ -132,31 +130,14 @@
          <children>
             <Button mnemonicParsing="false" onAction="#loadAllCars" prefHeight="30.0" prefWidth="99.0" stylesheets="@mystyle.css" text="Show All">
                <font>
-                  <Font name="Cambria" size="13.0" />
+                  <Font size="13.0" />
                </font>
             </Button>
             <Button mnemonicParsing="false" onAction="#filteredSearchAction" prefHeight="29.0" prefWidth="101.0" stylesheets="@mystyle.css" text="Filter Results">
                <font>
-                  <Font name="Cambria" size="13.0" />
+                  <Font size="13.0" />
                </font>
             </Button>
-         </children>
-      </VBox>
-      <VBox alignment="CENTER" layoutX="18.0" layoutY="104.0" prefHeight="52.0" prefWidth="141.0" spacing="5.0" style="-fx-border-color: gray; -fx-border-width: 2;">
-         <children>
-            <RadioButton fx:id="increasingRadioButton" mnemonicParsing="false" selected="true" stylesheets="@mystyle.css" text="decreasing price">
-               <font>
-                  <Font name="Cambria" size="14.0" />
-               </font>
-               <toggleGroup>
-                  <ToggleGroup fx:id="orderGroup" />
-               </toggleGroup>
-            </RadioButton>
-            <RadioButton fx:id="decreasingRadioButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="127.0" stylesheets="@mystyle.css" text="increasing price" toggleGroup="$orderGroup">
-               <font>
-                  <Font name="Cambria" size="14.0" />
-               </font>
-            </RadioButton>
          </children>
       </VBox>
       <Label fx:id="errorRequestLabel" layoutX="176.0" layoutY="595.0" prefHeight="42.0" prefWidth="168.0" stylesheets="@mystyle.css">

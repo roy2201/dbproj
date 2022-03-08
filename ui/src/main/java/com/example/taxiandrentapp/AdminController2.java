@@ -165,13 +165,17 @@ public class AdminController2 {
                     cs.execute();
                     errorCode.set(cs.getInt(3));
                     if (errorCode.get() == -1){
-                        labelInfo.setText("No enough balance to make this transaction");
+                       labelInfo.setText("No enough balance to make this transaction");
                     } else if (errorCode.get() == 1) {
                         labelInfo.setText("Transaction done");
                     }
                 } else if (errorCode.get() == -1){
                     labelInfo.setText("Enter a valid rent info id");
-                } else if (errorCode.get() == 0) labelInfo.setText("This request is already checked");
+                } else if (errorCode.get() == 0) {
+                    labelInfo.setText("This request is already checked");
+                } else if (errorCode.get() == -5) {
+                    labelInfo.setText("invalid refund percentage");
+                }
             } catch (SQLException e) {
                 e.printStackTrace();
             }

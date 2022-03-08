@@ -1,3 +1,5 @@
+
+
 .text-field{
     -fx-border-color: gray;
     -fx-background-radius: 5px;
@@ -15,22 +17,22 @@
 .button{
     -fx-background-color: #ADD8E6;
     -fx-border-color: black;
-    -fx-border-radius: 5px;
-    -fx-background-radius: 5px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
 }
 
 .button:hover{
     -fx-background-color: lightGreen;
     -fx-border-color: black;
-    -fx-border-radius: 5px;
-    -fx-background-radius: 5px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
 }
 
 .combo-box{
     -fx-background-color: pink;
     -fx-border-color: black;
-    -fx-border-radius: 5px;
-    -fx-background-radius: 5px;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
 }
 
 #logout:hover{
@@ -40,9 +42,7 @@
 }
 
 .label {
-    -fx-background-color: lightorange;
     -fx-alignment: center;
-    -fx-text-fill: blue;
     -fx-font-weight: 500;
     -fx-font-family: Arial;
     -fx-font-size: 14px;
@@ -53,6 +53,6 @@
     -fx-alignment: center;
     -fx-text-fill: red;
     -fx-font-weight: bold;
-    -fx-font-family: Cambria;
+    -fx-font-family: Arial;
     -fx-font-size: 16px;
 }
