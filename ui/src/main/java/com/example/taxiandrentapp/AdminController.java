@@ -115,12 +115,6 @@ public class AdminController {
         l.setText("");
     }
 
-    void resetLabels(Label... labels) {
-        for (Label label : labels) {
-            label.setText("");
-        }
-    }
-
     @FXML
     void AddCarBtn() {
         if (txtColor.getText().isEmpty() || txtYear.getText().isEmpty() || txtModel.getText().isEmpty() || txtType.getText().isEmpty() || txtPricePerDay.getText().isEmpty() || txtPenaltyPerDay.getText().isEmpty() || txtLocationId.getText().isEmpty() || txtInsuranceCost.getText().isEmpty()) {
@@ -146,7 +140,7 @@ public class AdminController {
 
     @FXML
     void ViewAllCustomers() {
-        String query = "select * from  fnViewAllCustomers()";
+        String query = "select * from  vwAllCustomers";
         try {
             ResultSet rs = adminModel.con.createStatement().executeQuery(query);
             drawTable(rs, tableAdmin1);
@@ -168,7 +162,7 @@ public class AdminController {
 
     @FXML
     void ViewExpired() {
-        String query = "select * from  fnViewExpired()";
+        String query = "select * from  vwExpiredInsurance";
         try {
             ResultSet rs = adminModel.con.createStatement().executeQuery(query);
             drawTable(rs, tableAdmin1);
@@ -179,7 +173,7 @@ public class AdminController {
 
     @FXML
     void ViewRented() {
-        String query = "select * FROM fnViewRented()";
+        String query = "select * FROM vwRentedCars";
         try {
             ResultSet rs = adminModel.con.createStatement().executeQuery(query);
             drawTable(rs, tableAdmin1);
@@ -190,7 +184,7 @@ public class AdminController {
 
     @FXML
     void ViewInsurance() {
-        String query = "select * from fnViewIncuranceHistory()";
+        String query = "select * from vwInsuranceHistory";
         try {
             ResultSet rs = adminModel.con.createStatement().executeQuery(query);
             drawTable(rs, tableAdmin1);

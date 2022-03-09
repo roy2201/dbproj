@@ -124,7 +124,7 @@ public class AdminController2 {
             errorCode = cs.getInt(1);
             if (errorCode == 1) {
                 msg = "There is requests not checked yet";
-                String query1 = "select * from fnViewPendingRequests()";
+                String query1 = "select * from vwPendingRequests";
                 cs = con.prepareCall(query1);
                 ResultSet rs = cs.executeQuery();
                 drawTable(rs,tableInfo);
