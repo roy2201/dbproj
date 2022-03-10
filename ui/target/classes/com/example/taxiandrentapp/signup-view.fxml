@@ -8,42 +8,42 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightyellow;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taxiandrentapp.SignupController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: DFDFDF;" stylesheets="@mystyle.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taxiandrentapp.SignupController">
    <children>
-      <Button fx:id="btnconfirm" layoutX="212.0" layoutY="283.0" mnemonicParsing="false" onAction="#ConfirmSignup" prefHeight="34.0" prefWidth="174.0" style="-fx-background-color: pink; -fx-border-color: black;" text="Create Account">
+      <Button id="create" fx:id="btnconfirm" layoutX="228.0" layoutY="301.0" mnemonicParsing="false" onAction="#ConfirmSignup" prefHeight="34.0" prefWidth="141.0" text="Create Account">
          <font>
-            <Font name="Cambria" size="15.0" />
+            <Font size="15.0" />
          </font></Button>
-      <Label fx:id="info" layoutX="187.0" layoutY="328.0" prefHeight="18.0" prefWidth="225.0" />
-      <Button layoutX="28.0" layoutY="347.0" mnemonicParsing="false" onAction="#signInPage" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: lightblue; -fx-border-color: black;" text="Back to home">
+      <Label fx:id="info" layoutX="186.0" layoutY="347.0" prefHeight="18.0" prefWidth="225.0" />
+      <Button id="back" layoutX="28.0" layoutY="347.0" mnemonicParsing="false" onAction="#signInPage" prefHeight="31.0" prefWidth="54.0" text="back">
          <font>
             <Font size="14.0" />
          </font></Button>
-      <VBox alignment="CENTER" layoutX="213.0" layoutY="26.0" prefHeight="178.0" prefWidth="173.0" spacing="10.0">
+      <VBox alignment="CENTER" layoutX="213.0" layoutY="41.0" prefHeight="178.0" prefWidth="173.0" spacing="10.0">
          <children>
-            <TextField fx:id="txtFirstName" promptText="firstname" style="-fx-border-color: gray;">
+            <TextField fx:id="txtFirstName" promptText="firstname">
                <font>
-                  <Font name="Cambria" size="14.0" />
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
                </font></TextField>
-            <TextField fx:id="txtLastName" promptText="lastname" style="-fx-border-color: gray;">
+            <TextField fx:id="txtLastName" promptText="lastname">
                <font>
-                  <Font name="Cambria" size="14.0" />
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
                </font></TextField>
-            <TextField fx:id="txtAge" promptText="age" style="-fx-border-color: gray;">
+            <TextField fx:id="txtAge" promptText="age">
                <font>
-                  <Font name="Cambria" size="14.0" />
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
                </font></TextField>
-            <TextField fx:id="txtAddress" promptText="address" style="-fx-border-color: gray;">
+            <TextField fx:id="txtAddress" promptText="address">
                <font>
-                  <Font name="Cambria" size="14.0" />
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
                </font></TextField>
-            <TextField fx:id="txtEmail" promptText="email" style="-fx-border-color: gray;">
+            <TextField fx:id="txtEmail" promptText="email">
                <font>
-                  <Font name="Cambria" size="14.0" />
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
                </font></TextField>
-            <PasswordField fx:id="txtPassword" promptText="password" style="-fx-border-color: gray;">
+            <PasswordField fx:id="txtPassword" promptText="password">
                <font>
-                  <Font name="Cambria" size="14.0" />
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
                </font></PasswordField>
          </children>
       </VBox>

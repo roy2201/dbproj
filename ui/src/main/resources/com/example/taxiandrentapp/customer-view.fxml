@@ -4,6 +4,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
@@ -11,139 +12,165 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0" prefWidth="1002.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taxiandrentapp.CustomerController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0" prefWidth="1002.0" stylesheets="@mystyle.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taxiandrentapp.CustomerController">
    <children>
       <TableView fx:id="carsTable" layoutX="492.0" layoutY="14.0" prefHeight="303.0" prefWidth="494.0" style="-fx-border-color: gray; -fx-background-color: lightgray;" />
-      <TextField fx:id="cardNumberTextField" layoutX="14.0" layoutY="411.0" prefHeight="28.0" prefWidth="151.0" promptText="Card Number" stylesheets="@mystyle.css">
-         <font>
-            <Font name="Cambria" size="13.0" />
-         </font></TextField>
-      <TextField fx:id="carIdTextField" layoutX="14.0" layoutY="285.0" prefHeight="30.0" prefWidth="151.0" promptText="Car ID" styleClass="textFields" stylesheets="@mystyle.css">
-         <font>
-            <Font name="Cambria" size="13.0" />
-         </font></TextField>
-      <TextField fx:id="nbDaysTextField" layoutX="14.0" layoutY="319.0" prefHeight="30.0" prefWidth="151.0" promptText="Number of Days" stylesheets="@mystyle.css">
-         <font>
-            <Font name="Cambria" size="13.0" />
-         </font></TextField>
-      <Button layoutX="14.0" layoutY="353.0" mnemonicParsing="false" onAction="#viewReceiptAction" prefHeight="30.0" prefWidth="151.0" stylesheets="@mystyle.css" text="View Reciept">
-         <font>
-            <Font size="13.0" />
-         </font></Button>
-      <Button layoutX="14.0" layoutY="448.0" mnemonicParsing="false" onAction="#payAction" prefHeight="27.0" prefWidth="151.0" stylesheets="@mystyle.css" text="Pay Reciept">
-         <font>
-            <Font size="13.0" />
-         </font></Button>
-      <ListView fx:id="receiptList" layoutX="198.0" layoutY="284.0" prefHeight="96.0" prefWidth="176.0" stylesheets="@mystyle.css" />
-      <Label fx:id="statusLabel" layoutX="176.0" layoutY="453.0" prefHeight="19.0" prefWidth="168.0" stylesheets="@mystyle.css" textFill="RED">
-         <font>
-            <Font name="Cambria Bold" size="13.0" />
-         </font></Label>
-      <Label fx:id="validDataLabel" layoutX="14.0" layoutY="385.0" prefHeight="17.0" prefWidth="151.0" stylesheets="@mystyle.css" textFill="RED">
-         <font>
-            <Font name="Cambria Bold" size="12.0" />
-         </font>
-      </Label>
+      <ListView fx:id="receiptList" layoutX="302.0" layoutY="258.0" prefHeight="100.0" prefWidth="124.0" />
       <TableView fx:id="cardsAndRents" layoutX="490.0" layoutY="394.0" prefHeight="264.0" prefWidth="501.0" style="-fx-border-color: gray; -fx-background-color: lightgray;" />
-      <Label fx:id="daysLeftLabel" layoutX="288.0" layoutY="195.0" prefHeight="52.0" prefWidth="168.0" stylesheets="@mystyle.css" textFill="#7300ff">
+      <Label fx:id="daysLeftLabel" layoutX="303.0" layoutY="167.0" prefHeight="52.0" prefWidth="168.0" textFill="#7300ff">
          <font>
             <Font name="Cambria" size="13.0" />
          </font>
       </Label>
-      <HBox layoutX="13.0" layoutY="206.0" prefHeight="41.0" prefWidth="273.0" spacing="5.0">
+      <HBox layoutX="20.0" layoutY="166.0" prefHeight="41.0" prefWidth="273.0" spacing="5.0">
          <children>
-            <TextField fx:id="rentInfoIdTextField" promptText="Rent ID" stylesheets="@mystyle.css">
+            <TextField fx:id="rentInfoIdTextField" promptText="Rent ID">
                <font>
-                  <Font name="Cambria" size="13.0" />
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
                </font></TextField>
-            <Button mnemonicParsing="false" onAction="#checkDaysLeftAction" stylesheets="@mystyle.css" text="check days left" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#checkDaysLeftAction" prefHeight="30.0" prefWidth="118.0" text="check days left" textAlignment="CENTER">
                <font>
-                  <Font size="13.0" />
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
                </font></Button>
          </children>
       </HBox>
       <HBox alignment="CENTER" layoutX="479.0" layoutY="353.0" prefHeight="31.0" prefWidth="494.0" spacing="5.0">
          <children>
-            <Button id="logout" mnemonicParsing="false" onAction="#signOutAction" prefHeight="27.0" prefWidth="91.0" stylesheets="@mystyle.css" text="log out">
+            <Button id="logout" mnemonicParsing="false" onAction="#signOutAction" prefHeight="27.0" prefWidth="91.0" text="log out">
                <font>
-                  <Font name="Cambria" size="14.0" />
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" stylesheets="@mystyle.css" text="Statistics">
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Statistics">
                <font>
-                  <Font size="13.0" />
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
                </font></Button>
-            <Button mnemonicParsing="false" onAction="#viewRequests" prefHeight="27.0" prefWidth="95.0" stylesheets="@mystyle.css" text="My Requests">
+            <Button mnemonicParsing="false" onAction="#viewRequests" prefHeight="27.0" prefWidth="95.0" text="My Requests">
                <font>
-                  <Font size="13.0" />
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
                </font></Button>
-            <Button mnemonicParsing="false" onAction="#viewRentsAction" prefHeight="25.0" prefWidth="84.0" stylesheets="@mystyle.css" text="My Rents">
+            <Button mnemonicParsing="false" onAction="#viewRentsAction" prefHeight="25.0" prefWidth="84.0" text="My Rents">
                <font>
-                  <Font size="13.0" />
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
                </font></Button>
-            <Button mnemonicParsing="false" onAction="#viewCardsAction" prefHeight="25.0" prefWidth="84.0" stylesheets="@mystyle.css" text="My Cards">
+            <Button mnemonicParsing="false" onAction="#viewCardsAction" prefHeight="25.0" prefWidth="84.0" text="My Cards">
                <font>
-                  <Font size="13.0" />
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
                </font></Button>
          </children>
       </HBox>
-      <VBox layoutX="13.0" layoutY="496.0" prefHeight="158.0" prefWidth="151.0" spacing="5.0">
+      <VBox layoutX="22.0" layoutY="468.0" prefHeight="132.0" prefWidth="151.0" spacing="5.0">
          <children>
-            <TextField fx:id="emailTextField" prefHeight="30.0" prefWidth="154.0" promptText="Email" stylesheets="@mystyle.css">
+            <TextField fx:id="emailTextField" prefHeight="30.0" prefWidth="154.0" promptText="Email">
                <font>
-                  <Font name="Cambria" size="13.0" />
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
                </font></TextField>
-            <TextField fx:id="rentIdTextField" prefHeight="25.0" prefWidth="166.0" promptText="Rent ID" stylesheets="@mystyle.css">
+            <TextField fx:id="rentIdTextField" prefHeight="25.0" prefWidth="166.0" promptText="Rent ID">
                <font>
-                  <Font size="13.0" />
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
                </font></TextField>
-            <TextField fx:id="cardTextField" prefHeight="25.0" prefWidth="166.0" promptText="Card number" stylesheets="@mystyle.css">
+            <TextField fx:id="cardTextField" prefHeight="25.0" prefWidth="166.0" promptText="Card number">
                <font>
-                  <Font name="Cambria" size="13.0" />
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
                </font></TextField>
-            <Button mnemonicParsing="false" onAction="#initRequest" prefHeight="30.0" prefWidth="187.0" stylesheets="@mystyle.css" text="Request Refund">
+            <Button mnemonicParsing="false" onAction="#initRequest" prefHeight="30.0" prefWidth="187.0" text="Request Refund">
                <font>
-                  <Font size="13.0" />
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
                </font></Button>
          </children>
       </VBox>
-      <Label fx:id="rentIdErrorLabel" layoutX="176.0" layoutY="537.0" prefHeight="17.0" prefWidth="168.0" stylesheets="@mystyle.css">
+      <Label fx:id="rentIdErrorLabel" layoutX="185.0" layoutY="509.0" prefHeight="17.0" prefWidth="168.0">
          <font>
             <Font name="Cambria Bold" size="12.0" />
          </font></Label>
-      <Label fx:id="cardNumberErrorLabel" layoutX="176.0" layoutY="575.0" prefHeight="17.0" prefWidth="168.0" stylesheets="@mystyle.css">
+      <Label fx:id="cardNumberErrorLabel" layoutX="185.0" layoutY="541.0" prefHeight="17.0" prefWidth="168.0">
          <font>
             <Font name="Cambria Bold" size="12.0" />
          </font></Label>
-      <Label fx:id="emailErrorLabel" layoutX="176.0" layoutY="502.0" prefHeight="17.0" prefWidth="168.0" stylesheets="@mystyle.css">
+      <Label fx:id="emailErrorLabel" layoutX="185.0" layoutY="474.0" prefHeight="17.0" prefWidth="168.0">
          <font>
             <Font name="Cambria Bold" size="13.0" />
          </font>
       </Label>
-      <HBox layoutX="18.0" layoutY="24.0" prefHeight="41.0" prefWidth="200.0" spacing="5.0">
+      <HBox layoutX="24.0" layoutY="45.0" prefHeight="41.0" prefWidth="200.0" spacing="5.0">
          <children>
-            <ComboBox fx:id="locationComboBox" prefHeight="25.0" prefWidth="114.0" promptText="Location" stylesheets="@mystyle.css" />
-            <ComboBox fx:id="modelComboBox" prefHeight="25.0" prefWidth="114.0" promptText="Model" stylesheets="@mystyle.css" />
+            <ComboBox fx:id="locationComboBox" prefHeight="25.0" prefWidth="114.0" promptText="Location" />
+            <ComboBox fx:id="modelComboBox" prefHeight="25.0" prefWidth="114.0" promptText="Model" />
          </children>
       </HBox>
-      <VBox layoutX="233.0" layoutY="24.0" prefHeight="68.0" prefWidth="141.0" spacing="5.0">
+      <VBox layoutX="231.0" layoutY="45.0" prefHeight="68.0" prefWidth="141.0" spacing="5.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#loadAllCars" prefHeight="30.0" prefWidth="99.0" stylesheets="@mystyle.css" text="Show All">
+            <Button mnemonicParsing="false" onAction="#loadAllCars" prefHeight="30.0" prefWidth="99.0" text="Show All">
                <font>
-                  <Font size="13.0" />
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#filteredSearchAction" prefHeight="29.0" prefWidth="101.0" stylesheets="@mystyle.css" text="Filter Results">
+            <Button mnemonicParsing="false" onAction="#filteredSearchAction" prefHeight="29.0" prefWidth="101.0" text="Filter Results">
                <font>
-                  <Font size="13.0" />
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
                </font>
             </Button>
          </children>
       </VBox>
-      <Label fx:id="errorRequestLabel" layoutX="176.0" layoutY="595.0" prefHeight="42.0" prefWidth="168.0" stylesheets="@mystyle.css">
+      <Label fx:id="errorRequestLabel" layoutX="185.0" layoutY="570.0" prefHeight="42.0" prefWidth="168.0">
          <font>
             <Font name="Cambria Bold" size="12.0" />
          </font>
       </Label>
+      <Label layoutX="156.0" layoutY="21.0" text="search" />
+      <Separator layoutX="207.0" layoutY="27.0" prefHeight="3.0" prefWidth="124.0" />
+      <Separator layoutX="29.0" layoutY="29.0" prefHeight="3.0" prefWidth="112.0" />
+      <Label layoutX="131.0" layoutY="137.0" text="days left" />
+      <Label layoutX="133.0" layoutY="234.0" text="rent car" />
+      <Label layoutX="54.0" layoutY="442.0" text="request refund" />
+      <Separator layoutX="24.0" layoutY="143.0" prefHeight="3.0" prefWidth="102.0" />
+      <Separator layoutX="186.0" layoutY="143.0" prefHeight="3.0" prefWidth="91.0" />
+      <Separator layoutX="24.0" layoutY="240.0" prefHeight="3.0" prefWidth="102.0" />
+      <Separator layoutX="190.0" layoutY="240.0" prefHeight="3.0" prefWidth="102.0" />
+      <VBox layoutX="23.0" layoutY="258.0" prefHeight="119.0" prefWidth="124.0" spacing="5.0">
+         <children>
+            <TextField fx:id="carIdTextField" prefHeight="30.0" prefWidth="151.0" promptText="Car ID" styleClass="textFields">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="nbDaysTextField" prefHeight="30.0" prefWidth="151.0" promptText="Number of Days">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#viewReceiptAction" prefHeight="30.0" prefWidth="151.0" text="View Reciept">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </Button>
+            <Label fx:id="validDataLabel" prefHeight="17.0" prefWidth="151.0" textFill="RED">
+               <font>
+                  <Font name="Cambria Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="162.0" layoutY="294.0" prefHeight="100.0" prefWidth="124.0" spacing="5.0">
+         <children>
+            <TextField fx:id="cardNumberTextField" prefHeight="28.0" prefWidth="151.0" promptText="Card Number">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#payAction" prefHeight="27.0" prefWidth="151.0" text="Pay Reciept">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </Button>
+            <Label fx:id="statusLabel" prefHeight="19.0" prefWidth="168.0" textFill="RED">
+               <font>
+                  <Font name="Cambria Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Separator layoutX="20.0" layoutY="446.0" prefHeight="3.0" prefWidth="31.0" />
+      <Separator layoutX="146.0" layoutY="448.0" prefHeight="3.0" prefWidth="31.0" />
    </children>
 </Pane>
