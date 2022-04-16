@@ -149,14 +149,16 @@ public class AdminSecurity implements Initializable {
 
     @FXML
     void addLogin() {
-        String query = "exec spCreateLogin ?,?,?";
+        String query = "exec spCreateLogin ?,?,?,?";
         CallableStatement cst;
         try {
             cst = con.prepareCall(query);
             cst.setString(1, txtLogName.getText());
             cst.setString(2, txtLogPass.getText());
             cst.setString(3, databasesComboBox.getValue());
+            cst.registerOutParameter(4, Types.VARCHAR);
             cst.execute();
+            System.out.println(cst.getString(4));
         }catch (SQLException e) {
             e.printStackTrace();
         }
